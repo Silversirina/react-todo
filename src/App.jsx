@@ -3,25 +3,28 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import React from 'react';
-
 const todoList = [
-  { id: 1, title: "Pet my doggies" },
-  { id: 2, title: "Eat some veggies" },
+
+  { id: 1, title: "Pet my puppy" },
   { id: 2, title: "Wash my car" },
+  { id: 3, title: "Learn JavaScript" },
 
 ];
 
-
-
 function App() {
-  return (
+  const [count, setCount] = useState(0)
 
-    <div>
+  return (
+    <>
       <h1>Todo List</h1>
-      <ul></ul>
-    </div>
-  );
+      <ul>
+        {todoList.map(function (item) {
+          return <li key={item.id}>{item.title}</li>
+        })}
+      </ul>
+    </>
+  )
 }
 
-export default App;
+
+export default App
