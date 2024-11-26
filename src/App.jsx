@@ -1,17 +1,19 @@
-import React, { useState } from 'react'; // Correct single import
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import React from 'react';
 import './App.css';
-import TodoList from './TodoList';
-import AddTodoForm from './AddTodoForm';
+import TodoList from './TodoList'; // Import the TodoList 
+import AddTodoForm from './AddTodoForm'; // Import the AddTodoForm 
 
 function App() {
-  const [newTodo, setNewTodo] = useState('');
-
   return (
     <>
       <h1>Todo Application</h1>
-      <AddTodoForm onAddTodo={setNewTodo} />
-      <p>New Todo: {newTodo}</p>
+      <AddTodoForm />
+
       <TodoList />
+
     </>
   );
 }
